@@ -4,10 +4,8 @@ There's not much different with Python's version compared to what
 you'll find in other languages (though you can also initialize and
 populate dictionaries using comprehensions just like you can with
 lists!).
-
 The docs can be found here:
 https://docs.python.org/3/tutorial/datastructures.html#dictionaries
-
 For this exercise, you have a list of dictionaries. Each dictionary
 has the following keys:
  - lat: a signed integer representing a latitude value
@@ -16,25 +14,15 @@ has the following keys:
 """
 
 waypoints = [
-    {
-        "lat": 43,
-        "lon": -121,
-        "name": "a place"
-    },
-    {
-        "lat": 41,
-        "lon": -123,
-        "name": "another place"
-    },
-    {
-        "lat": 43,
-        "lon": -122,
-        "name": "a third place"
-    }
+    {"lat": 43, "lon": -121, "name": "a place"},
+    {"lat": 41, "lon": -123, "name": "another place"},
+    {"lat": 43, "lon": -122, "name": "a third place"},
 ]
 
 # Add a new waypoint to the list
 # YOUR CODE HERE
+waypoints.append({"lat": 111, "lon": 222, "name": "final place"})
+# print(waypoints)
 
 # Modify the dictionary with name "a place" such that its longitude
 # value is -130 and change its name to "not a real place"
@@ -42,6 +30,10 @@ waypoints = [
 # waypoints list.
 
 # YOUR CODE HERE
+waypoints[0].update({"lon": -130, "name": "not a real place"})
+print(waypoints[0])
 
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
+for keys in waypoints:
+    print(keys)
